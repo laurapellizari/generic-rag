@@ -53,7 +53,6 @@ def retrieve_context(elastic_client, index_name, query, top_k=3):
         response = elastic_client.search(index=index_name, body=body)
         hits = response["hits"]["hits"]
 
-        # Extrai os textos dos trechos relevantes
         return [hit["_source"].get("Page", "") for hit in hits]
 
     except Exception as e:

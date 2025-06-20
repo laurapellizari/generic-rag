@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_BASE_URL = "http://localhost:5000"  # update this to match your actual Flask API URL
+API_BASE_URL = "http://localhost:5000"  
 
 def api_list_documents(index):
     url = f"{API_BASE_URL}/list_docs"
@@ -55,7 +55,6 @@ def api_search_question(index, question):
     except Exception as e:
         return {"error": str(e)}, 500
 
-# Session state for connection status
 if "connected" not in st.session_state:
     st.session_state.connected = False
 
@@ -78,7 +77,6 @@ with tab1:
         connect = st.form_submit_button("Connect")
 
         if connect:
-            # Elasticsearch connection
             es_resp_json, es_status = api_connect(endpoint, api_key)
             if es_status == 200:
                 st.session_state.connected = True
@@ -128,7 +126,6 @@ with tab3:
                 docs = resp_json.get("documents", [])
 
                 if docs and isinstance(docs[0], dict):
-                    # Remove documentos duplicados pelo nome
                     seen_names = set()
                     unique_docs = []
 
