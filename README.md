@@ -142,7 +142,7 @@ docker run -p 5000:5000 pdf-rag-app
 
 ## Optional Enhancements
 
-- Multi-provider LLM support (OpenAI, Claude, Mistral, etc.)
+- Multi-provider LLM support (Watsonx, Claude, Mistral, etc.)
 - Image summarization via base64 + prompt
 - Stats/logging/monitoring
 - PDF viewer on UI
