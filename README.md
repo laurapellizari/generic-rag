@@ -132,10 +132,10 @@ You can run the backend and frontend in a Docker container:
 
 ```bash
 # Build container
-docker build -t pdf-rag-app .
+docker build --platform linux/arm64 -t generic-rag . 
 
 # Run the container
-docker run -p 5000:5000 pdf-rag-app
+ podman run --rm -p 5000:5000 -p 8501:8501 generic-rag
 ```
 
 ---
