@@ -93,20 +93,6 @@ Asks a question and returns an answer based on uploaded documents.
 
 ---
 
-##  Docker
-
-You can run the backend and frontend in a Docker container:
-
-```bash
-# Build container
-docker build -t pdf-rag-app .
-
-# Run the container
-docker run -p 5000:5000 pdf-rag-app
-```
-
----
-
 ##  Project Structure
 
 ```
@@ -140,6 +126,17 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+## 4. Docker
+
+You can run the backend and frontend in a Docker container:
+
+```bash
+# Build container
+docker build -t pdf-rag-app .
+
+# Run the container
+docker run -p 5000:5000 pdf-rag-app
+```
 
 ---
 
